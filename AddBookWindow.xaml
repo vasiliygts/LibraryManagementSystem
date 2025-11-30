@@ -1,0 +1,62 @@
+﻿<Window x:Class="LibraryManagementSystem.AddBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Book" Height="400" Width="600">
+    <!-- Збільшена ширина -->
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="Title:" Width="100" VerticalAlignment="Center" />
+            <TextBox Name="TitleTextBox" Width="400" />
+            <!-- Збільшена ширина -->
+        </StackPanel>
+
+        <!-- Author -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="Author:" Width="100" VerticalAlignment="Center" />
+            <TextBox Name="AuthorTextBox" Width="400" />
+            <!-- Збільшена ширина -->
+        </StackPanel>
+
+        <!-- Genre -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="Genre:" Width="100" VerticalAlignment="Center" />
+            <TextBox Name="GenreTextBox" Width="400" />
+            <!-- Збільшена ширина -->
+        </StackPanel>
+
+        <!-- Year -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="Year:" Width="100" VerticalAlignment="Center" />
+            <TextBox Name="YearTextBox" Width="400" />
+            <!-- Збільшена ширина -->
+        </StackPanel>
+
+        <!-- ISBN -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,10,0,0">
+            <Label Content="ISBN:" Width="100" VerticalAlignment="Center" />
+            <TextBox Name="ISBNTextBox" Width="400" MaxLength="13" />
+            <!-- Обмеження до 13 символів -->
+        </StackPanel>
+
+        <!-- Add Book Button -->
+        <Button Content="Add Book" 
+                Grid.Row="5" 
+                Margin="0,20,0,0" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Top"
+                Width="150" 
+                Height="40"
+                FontSize="14"
+                Click="AddBook_Click" />
+    </Grid>
+</Window>
